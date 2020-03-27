@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.binder_service">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.LoginService" android:exported="true" android:process=":remote"/>
+        <!--
+            android:exported="true" 表示跨进程
+            表示允许其他应用打开，对于所有的 Service，如果想从其他应用打开，也都要加上这个属性
+            对于除了入口 Activity 之外的其他组件，如果不加这个属性，都会抛出 “java.lang.SecurityException: Permission Denial.....” 异常
+
+
+            入口 Activity 和普通 Activity 唯一不同的地方就是入口 Activity 多了一个过滤器，对于包含了过滤器的组件，
+            意味着该组件可以提供给外部的其他应用来使用，它的 exported 属性默认为 true，
+            相反，如果一个组件不包含任何过滤器，那么意味着该组件只能通过指定明确的类名来调用，也就是说该组件只能在应用程序的内部使用，
+            在这种情况下，exported 属性的默认值是 false
+        -->
+    </application>
+
+</manifest>

@@ -1,2 +1,4 @@
 rootProject.name='FrameworkMobile'
 include ':handler'
+include ':binder_service'
+include ':binder_client'
