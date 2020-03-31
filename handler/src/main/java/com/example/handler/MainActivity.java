@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 我们创建的Handler又是一个匿名内部类的实例，其持有外部Activity的引用，这将导致了Activity无法回收，进行导致Activity持有的很多资源都无法回收，从而就造成了传说中的内存泄露问题
      */
-    private Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(@NonNull Message msg) {
-            super.handleMessage(msg);
-        }
-    };
+//    private Handler mHandler = new Handler() {
+//        @Override
+//        public void handleMessage(@NonNull Message msg) {
+//            super.handleMessage(msg);
+//        }
+//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
