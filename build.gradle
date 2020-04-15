@@ -3,6 +3,13 @@
 buildscript {
     
     repositories {
+        maven {
+            url "http://nexus.2dfire-dev.com/repository/maven-public/"
+            credentials { //这里不直接配置会引用不到monitor的架包
+                username 'xiaomijiao'
+                password '5imj5170989'
+            }
+        }
         google()
         jcenter()
         
@@ -18,6 +25,14 @@ buildscript {
 
 allprojects {
     repositories {
+        //用户名和密码不要直接写在这里，请到'local.properties'配置自己的帐号
+        maven {
+            url "http://nexus.2dfire-dev.com/repository/maven-public/"
+            credentials {
+                username 'xiaomijiao'
+                password '5imj5170989'
+            }
+        }
         google()
         jcenter()
         
