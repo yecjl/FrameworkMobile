@@ -1,4 +1,4 @@
-package com.example.memoryleaks;
+package com.example.classload;
 
 import org.junit.Test;
 

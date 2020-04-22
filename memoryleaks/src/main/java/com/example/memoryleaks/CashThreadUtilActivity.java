@@ -7,8 +7,6 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.zmsoft.embed.concurrent.ThreadUtils;
-
 /**
  * @ClassName CashThreadUtilActivity
  * @Description TODO
@@ -37,7 +35,7 @@ public class CashThreadUtilActivity extends AppCompatActivity {
 //                }
 //            }
 //        });
-        ThreadUtils.run(new MyRunnable());
+//        ThreadUtils.run(new MyRunnable());
     }
 
     private static class MyRunnable implements Runnable {

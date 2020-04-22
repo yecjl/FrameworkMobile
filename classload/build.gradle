@@ -5,7 +5,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.example.memoryleaks"
+        applicationId "com.example.classload"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -31,17 +31,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
-    implementation 'com.badoo.mobile:android-weak-handler:1.1'
-
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.2'
-
-
-    //RxJava
-    implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: "2.1.8"
-    implementation group: 'io.reactivex.rxjava2', name: 'rxandroid', version: "2.0.1"
-
-//    api("com.dfire.cashdesk:mobile-core-bo:5.8.88.2@aar") {
-//        changing = true
-//    }
 }
